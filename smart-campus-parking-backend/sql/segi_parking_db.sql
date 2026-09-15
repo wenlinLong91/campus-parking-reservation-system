@@ -52,3 +52,27 @@ VALUES
     ('A01'), ('A02'), ('A03'),
     ('A04'), ('A05'), ('A06'),
     ('A07'), ('A08'), ('A09');
+
+-- Local demonstration accounts only.
+-- Admin login: demo_admin / AdminDemo123!
+-- Staff login: demo_staff / StaffDemo123!
+
+INSERT INTO sys_user
+    (user_number, staff_id, username, password, role, create_time)
+VALUES
+    (
+        'DEMO-ADMIN',
+        'DEMO-ADMIN',
+        'demo_admin',
+        '$2b$12$scsX46LGE2y/B9gMnYLzGuFaLS/AJ60fnMcg6CB9RM4x2Lv/rGne6',
+        'ADMIN',
+        '2026-09-15'
+    ),
+    (
+        'DEMO-STAFF',
+        'DEMO-STAFF',
+        'demo_staff',
+        '$2b$12$PwWYMOkuSxXvKO6nvhEWi.j1evJN7E8FRL.D1O2hlIhdCmntQlcqu',
+        'USER',
+        '2026-09-15'
+    );
